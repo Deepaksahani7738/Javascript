@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison Operators</title>
+</head>
+
+<body>
+    <input type="number" value="age" id="age">
+    <button  onclick="calculation()">click me</button>
+
+    <script>
+        function calculation() {
+          //  var age = eval(prompt("Enter the age"));
+            var age=eval(document.getElementById("age").value);
+            var res;
+            if (age === 18) {
+                res = document.write("eligible for vote");
+                res = alert("this is a valid data")
+            } else if (age >= 1 && age < 18) {
+                res = document.write("you are child you can,not eligible for vote");
+            } else if (age >= 18 && age <= 100) {
+                res = document.write("you can drive and also eligible for vote");
+            } else if (age == null) {
+                res = document.write("your age is note define !");
+
+            } else if (age >= 100) {
+                res = document.write("your age is so long , enter valid age !!");
+            } else if (age == 0) {
+                res = document.write("zero is not define");
+            } else if (age < 0) {
+                res = document.write("negative age is not define ,enter valid age");
+            } else {
+                res = document.write("error..");
+            }
+        }
+    </script>
+</body>
+
+</html>
