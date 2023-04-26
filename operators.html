@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        display: block;
+        text-align: center;
+        border: 1px solid powderblue;
+        margin-left: 100px;
+        margin-right: 100px;
+        background-color: antiquewhite;
+        box-shadow: 1px 2px 10px lightcoral;
+        margin-top:50px;
+    }
+    .num1 {
+        margin-bottom: 10px;
+        margin: 20px;
+    }
+    .num2 {
+        margin-top: 10px;
+        margin: 20px;
+    }
+    .opr #opr {
+        width: 150px;
+        margin-right: 100px;
+    }
+    input {
+        font-size: 20px;    
+    }
+    select {
+        font-size: 20px;    
+    }
+    .button {
+        margin-top: 10px;
+        margin-right: 130px;
+        margin-bottom: 20px;
+    }
+    .button #mydata {
+        font-size: 18px;
+    }
+    #d1{
+        border-radius: 5px;
+    }
+    #d2{
+        border-radius: 5px;
+    }
+    #info{
+        display: block;
+        background-color: rgb(228, 242, 140);
+        text-align: center;
+        margin-top: 100px;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 20px;
+        box-shadow: 1px 2px 10px lightgray;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+       
+        <div class="num1">
+            <label for="num1">NUM1:</label>
+            <input type="number" value="ad1" id="d1">
+        </div>
+        <div class="opr">
+            OPERATOR:<select name="opr" id="opr">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">x</option>
+                <option value="/">/</option>
+            </select>
+        </div>
+        <div class="num2">
+            <label for="num2">NUM2:</label>
+            <input type="number" value="ad2" id="d2">
+            <div class="button">
+                <button id="mydata" onclick="calculator()">click here</button>
+            </div>
+        </div>
+    </div>
+    <div id="info">
+    <label for="data3">NUM1:</label>
+    <span id="data3"></span><br><br>
+
+    <label for="data3">NUM2:</label>
+    <span id="data4"></span><br><br>
+    <label for="data3">TOTAL:</label>
+    <span id="total"></span>
+</div>
+    <script>
+        function calculator() {
+            var data1 = eval(document.getElementById("d1").value);
+            var data2 = eval(document.getElementById("d2").value);
+            var opr = document.getElementById("opr").value;
+
+
+
+           
+
+            if (opr == "+") {
+                c = data1 + data2;
+                if (opr == "+") {
+                    //document.write("ADDITION IS EQUAL TO : " + c)
+                    document.getElementById("data3").innerHTML=data1
+                    document.getElementById("data4").innerHTML=data2
+                    document.getElementById("total").innerHTML=c
+                }
+            }
+           else if (opr == "-") {
+                c = data1 - data2;
+                if (opr == "-") {
+                   // document.write("SUB IS EQUAL TO : " + c)
+                   document.getElementById("data3").innerHTML=data1
+                   document.getElementById("data4").innerHTML=data2
+                   document.getElementById("total").innerHTML=c
+                }
+
+            } else if (opr == "*") {
+                c = data1 * data2;
+                if (opr == "*") {
+                    //document.write("MUL IS EQUAL TO : " + c)
+                    document.getElementById("data3").innerHTML=data1
+                    document.getElementById("data4").innerHTML=data2
+                    document.getElementById("total").innerHTML=c
+                }
+            } else if (opr == "/") {
+                c = data1 / data2;
+                if (opr == "/") {
+                   // document.write("DIV IS EQUAL TO : " + c)
+                   document.getElementById("data3").innerHTML=data1
+                   document.getElementById("data4").innerHTML=data2
+                   document.getElementById("total").innerHTML=c
+                }
+            }
+
+          
+           
+           
+        }
+    </script>
+</body>
+
+
+
+</html>
